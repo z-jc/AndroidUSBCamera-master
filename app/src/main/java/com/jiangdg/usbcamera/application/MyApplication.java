@@ -1,0 +1,19 @@
+package com.jiangdg.usbcamera.application;
+
+import android.app.Application;
+
+import com.jiangdg.usbcamera.utils.CrashHandler;
+
+/**全局类
+ *
+ * Created by jianddongguo on 2017/7/20.
+ */
+
+public class MyApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        CrashHandler.getInstance().init(getApplicationContext());
+    }
+}
